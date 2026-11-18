@@ -1,28 +1,38 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Ramnagar Digital Governance
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/ff23ef03-ad5f-4861-9765-5cc2fe7d9d3b
+A bilingual digital municipal governance platform for Nagar Parishad Ramnagar, West Champaran, Bihar. It provides citizen services, ward information, grievance management, complaint tracking, and an administrative staff dashboard.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+Prerequisites: Node.js 22+
 
 1. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Copy `.env.example` to `.env.local` and set `SESSION_SECRET` to a long random value.
+3. Start the portal:
    `npm run dev`
+4. Open `http://localhost:3000`.
+
+## Demo Staff Accounts
+
+All demo accounts use the password `Bihar@2026`:
+
+- `mukhiya`
+- `sachiv`
+- `sarpanch`
+- `ward4`
+
+## Validation
+
+- `npm run lint`
+- `npm run build`
 
 ## Deploy to Vercel
 
-1. Import the repository in Vercel and use the default Vite project settings.
+1. Import the GitHub repository in Vercel.
 2. Set `SESSION_SECRET` to a long random value in Vercel Project Settings.
-3. Deploy. The API is served by `api/index.ts`; the React application is built into `dist`.
+3. Deploy with the included `vercel.json` configuration.
 
-The SQLite database is copied into `/tmp` on Vercel. This supports the demo and read/write operations, but Vercel serverless filesystem changes are not guaranteed to persist across cold starts or regions. Use a managed SQLite-compatible service such as Turso or a Vercel database integration for durable production data.
+The API is served by `api/index.ts`, and the React application is built into `dist`.
+
+The included SQLite database is copied into `/tmp` on Vercel for demonstration use. Vercel serverless storage is temporary, so an external managed database is recommended for persistent production data.

@@ -8,3 +8,12 @@ coverage/
 !.env.example
 *.db-wal
 *.db-shm
+.vscode/
+.idea/
+tempCodeRunnerFile.py
+__pycache__/
+*.py[codz]
+*.so
+*.egg-info/
+venv/
+.venv/
