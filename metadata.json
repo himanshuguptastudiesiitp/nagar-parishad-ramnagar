@@ -1,0 +1,6 @@
+{
+  "name": "Gram Panchayat Raj Rampur - Bihar E-Governance Portal",
+  "description": "Official Bihar Gram Panchayat Management, RTPS Citizen Services, Welfare Schemes, Financial Transparency, Gram Sabha & Janta Darbar E-Governance Portal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
